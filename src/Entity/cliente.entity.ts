@@ -1,4 +1,5 @@
-import { Entity, PrimaryGeneratedColumn, Column, CreateDateColumn } from 'typeorm';
+import { Entity, PrimaryGeneratedColumn, Column, CreateDateColumn, OneToMany } from 'typeorm';
+import { Envio } from './envio.entity';
 
 @Entity('clientes')
 export class Cliente {
@@ -28,4 +29,7 @@ export class Cliente {
 
   @CreateDateColumn()
   creadoEn: Date;
+
+  @OneToMany(() => Envio, (envio) => envio.cliente)
+  envios: Envio[];
 }
