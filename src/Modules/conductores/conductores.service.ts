@@ -5,7 +5,7 @@ import { CreateConductorDto } from '../../DTOS/create-conductor.dto';
 import { UpdateConductorDto } from '../../DTOS/update-conductor.dto';
 import { CreateViajeDto } from '../../DTOS/create-viaje.dto';
 import { Conductor } from './entities/conductor.entity';
-import { Vehiculo, TipoTransporteEnum } from './entities/vehiculo.entity';
+import { Vehiculo } from '../../Entity/vehiculo.entity';
 import { Viaje } from './entities/viaje.entity';
 
 @Injectable()

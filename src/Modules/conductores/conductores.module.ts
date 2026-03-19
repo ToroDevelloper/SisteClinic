@@ -3,7 +3,7 @@ import { TypeOrmModule } from '@nestjs/typeorm';
 import { ConductoresController } from './conductores.controller';
 import { ConductoresService } from './conductores.service';
 import { Conductor } from './entities/conductor.entity';
-import { Vehiculo } from './entities/vehiculo.entity';
+import { Vehiculo } from '../../Entity/vehiculo.entity';
 import { Viaje } from './entities/viaje.entity';
 
 @Module({
