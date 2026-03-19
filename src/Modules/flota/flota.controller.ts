@@ -1,7 +1,7 @@
 import { Controller, Get, Post, Body, Param, ParseIntPipe } from '@nestjs/common';
 import { FlotaService } from './flota.service';
-import { CreateTipoTransporteDto } from '../../Dto/create-tipo-transporte.dto';
-import { CreateVehiculoDto } from '../../Dto/create-vehiculo.dto';
+import { CreateTipoTransporteDto } from './dto/create-tipo-transporte.dto';
+import { CreateVehiculoDto } from './dto/create-vehiculo.dto';
 
 @Controller('flota')
 export class FlotaController {

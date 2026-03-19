@@ -3,8 +3,8 @@ import { InjectRepository } from '@nestjs/typeorm';
 import { Repository } from 'typeorm';
 import { Vehiculo } from '../../Entity/vehiculo.entity';
 import { TipoTransporte } from '../../Entity/tipo-transporte.entity';
-import { CreateVehiculoDto } from '../../Dto/create-vehiculo.dto';
-import { CreateTipoTransporteDto } from '../../Dto/create-tipo-transporte.dto';
+import { CreateVehiculoDto } from './dto/create-vehiculo.dto';
+import { CreateTipoTransporteDto } from './dto/create-tipo-transporte.dto';
 
 @Injectable()
 export class FlotaService {
