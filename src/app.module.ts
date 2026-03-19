@@ -27,6 +27,20 @@ import { Viaje } from './Modules/conductores/entities/viaje.entity';
       }),
     }),
     ConductoresModule,
+import { FlotaModule } from './Modules/flota/flota.module';
+import { getDatabaseConfig } from './config/database.config';
+
+@Module({
+  imports: [
+    ConfigModule.forRoot({
+      isGlobal: true,
+    }),
+    TypeOrmModule.forRootAsync({
+      imports: [ConfigModule],
+      inject: [ConfigService],
+      useFactory: getDatabaseConfig,
+    }),
+    FlotaModule,
   ],
   controllers: [AppController],
   providers: [AppService],
