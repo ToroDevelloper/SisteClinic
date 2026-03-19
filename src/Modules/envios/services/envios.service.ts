@@ -6,7 +6,7 @@ import { CreateEnvioDto } from '../../../DTOS/create-envio.dto';
 import { UpdateEnvioDto } from '../../../DTOS/update-envio.dto';
 import { Cliente } from '../../../Entity/cliente.entity';
 import { Conductor } from '../../conductores/entities/conductor.entity';
-import { Sucursal } from '../../Infraestructura/infraestructura.entity';
+import { Sucursal } from '../../../Entity/infraestructura.entity';
 import { Vehiculo } from '../../../Entity/vehiculo.entity';
 
 @Injectable()
