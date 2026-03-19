@@ -1,8 +1,8 @@
 import { Body, Controller, Delete, Get, Param, ParseIntPipe, Post, Put, BadRequestException } from '@nestjs/common';
 import { ConductoresService } from './conductores.service';
-import { CreateConductorDto } from './dto/create-conductor.dto';
-import { UpdateConductorDto } from './dto/update-conductor.dto';
-import { CreateViajeDto } from './dto/create-viaje.dto';
+import { CreateConductorDto } from '../../DTOS/create-conductor.dto';
+import { UpdateConductorDto } from '../../DTOS/update-conductor.dto';
+import { CreateViajeDto } from '../../DTOS/create-viaje.dto';
 
 @Controller('conductores')
 export class ConductoresController {

@@ -2,8 +2,8 @@ import { Injectable, NotFoundException, ConflictException } from '@nestjs/common
 import { InjectRepository } from '@nestjs/typeorm';
 import { Repository } from 'typeorm';
 import { Sucursal } from './infraestructura.entity';
-import { CrearSucursalDto } from './dto/crear-sucursal.dto';
-import { ActualizarSucursalDto } from './dto/actualizar-sucursal.dto';
+import { CrearSucursalDto } from '../../DTOS/crear-sucursal.dto';
+import { ActualizarSucursalDto } from '../../DTOS/actualizar-sucursal.dto';
 
 
 @Injectable()

@@ -1,7 +1,7 @@
 import { Controller, Get, Post, Body, Patch, Param, Delete, HttpStatus, HttpCode } from '@nestjs/common';
 import { InfraestructuraService } from './infraestructura.service';
-import { CrearSucursalDto } from './dto/crear-sucursal.dto';     
-import { ActualizarSucursalDto } from './dto/actualizar-sucursal.dto';
+import { CrearSucursalDto } from '../../DTOS/crear-sucursal.dto';
+import { ActualizarSucursalDto } from '../../DTOS/actualizar-sucursal.dto';
 
 @Controller('sucursales')
 export class InfraestructuraController {
