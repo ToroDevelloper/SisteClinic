@@ -1,11 +1,25 @@
 import { Module } from '@nestjs/common';
+import { ConfigModule, ConfigService } from '@nestjs/config';
+import { TypeOrmModule } from '@nestjs/typeorm';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
-import { CoModule } from './s/co/co.module';
-import { PaqueteModule } from './modules/paquete/paquete.module';
+import { FlotaModule } from './Modules/flota/flota.module';
+import { PaqueteModule } from './Modules/paquete/paquete.module';
+import { getDatabaseConfig } from './config/database.config';
 
 @Module({
-  imports: [CoModule, PaqueteModule],
+  imports: [
+    ConfigModule.forRoot({
+      isGlobal: true,
+    }),
+    TypeOrmModule.forRootAsync({
+      imports: [ConfigModule],
+      inject: [ConfigService],
+      useFactory: getDatabaseConfig,
+    }),
+    FlotaModule,
+    PaqueteModule,
+  ],
   controllers: [AppController],
   providers: [AppService],
 })
