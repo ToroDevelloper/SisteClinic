@@ -28,6 +28,7 @@ import { Viaje } from './Modules/conductores/entities/viaje.entity';
     }),
     ConductoresModule,
 import { FlotaModule } from './Modules/flota/flota.module';
+import { PaqueteModule } from './Modules/paquete/paquete.module';
 import { getDatabaseConfig } from './config/database.config';
 
 @Module({
@@ -41,6 +42,7 @@ import { getDatabaseConfig } from './config/database.config';
       useFactory: getDatabaseConfig,
     }),
     FlotaModule,
+    PaqueteModule,
   ],
   controllers: [AppController],
   providers: [AppService],
