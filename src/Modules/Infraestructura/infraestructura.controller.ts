@@ -8,7 +8,6 @@ export class InfraestructuraController {
     constructor(private readonly infraestructuraService: InfraestructuraService) {}
 
     @Post()
-    @HttpCode(HttpStatus.CREATED)
     crear(@Body() crearSucursalDto: CrearSucursalDto) {
         return this.infraestructuraService.crear(crearSucursalDto);
     }
@@ -34,7 +33,6 @@ export class InfraestructuraController {
     }
 
     @Delete(':id')
-    @HttpCode(HttpStatus.NO_CONTENT)
     eliminar(@Param('id') id: string) {
         return this.infraestructuraService.eliminar(id);
     }
