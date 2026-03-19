@@ -5,7 +5,7 @@ import { EnviosService } from './services/envios.service';
 import { Envio } from '../../Entity/envio.entity';
 import { Cliente } from '../../Entity/cliente.entity';
 import { Conductor } from '../conductores/entities/conductor.entity';
-import { Sucursal } from '../Infraestructura/infraestructura.entity';
+import { Sucursal } from '../../Entity/infraestructura.entity';
 import { Vehiculo } from '../../Entity/vehiculo.entity';
 
 @Module({

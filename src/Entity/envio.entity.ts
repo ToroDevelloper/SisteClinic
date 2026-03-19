@@ -10,7 +10,7 @@ import {
 import { Cliente } from './cliente.entity';
 import { Paquete } from './paquete.entity';
 import { Conductor } from '../Modules/conductores/entities/conductor.entity';
-import { Sucursal } from '../Modules/Infraestructura/infraestructura.entity';
+import { Sucursal } from './infraestructura.entity';
 import { Vehiculo } from './vehiculo.entity';
 
 @Entity('envios')
