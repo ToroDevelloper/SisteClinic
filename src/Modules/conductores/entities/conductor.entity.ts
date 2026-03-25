@@ -1,5 +1,5 @@
 import { Column, Entity, ManyToOne, OneToMany, PrimaryGeneratedColumn } from 'typeorm';
-import { Vehiculo } from './vehiculo.entity';
+import { Vehiculo } from '../../../Entity/vehiculo.entity';
 import { Viaje } from './viaje.entity';
 
 @Entity('conductores')

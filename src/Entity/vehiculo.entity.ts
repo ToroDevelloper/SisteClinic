@@ -1,5 +1,6 @@
-import { Column, Entity, ManyToOne, PrimaryGeneratedColumn } from "typeorm";
+import { Column, Entity, ManyToOne, OneToMany, PrimaryGeneratedColumn } from "typeorm";
 import { TipoTransporte } from "./tipo-transporte.entity";
+import { Conductor } from "../Modules/conductores/entities/conductor.entity";
 
 @Entity()
 export class Vehiculo {
@@ -17,4 +18,7 @@ export class Vehiculo {
 
     @ManyToOne(() => TipoTransporte, (tipoTransporte) => tipoTransporte.vehiculos)
     tipoTransporte: TipoTransporte;
+
+    @OneToMany(() => Conductor, (conductor) => conductor.vehiculo)
+    conductores: Conductor[];
 }
